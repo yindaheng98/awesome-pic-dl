@@ -1,8 +1,8 @@
 # awesome-pic-dl
 
-🐳A docker image for some awesome picture downloader (image size < 100M).
+🐳A docker image for some awesome picture downloader (image size < 30M).
 
-🐳将一些牛逼的图片下载工具打包成Docker镜像(镜像体积<100M)。
+🐳将一些牛逼的图片下载工具打包成Docker镜像(镜像体积 < 30M)。
 
 View on DockerHub: [yindaheng98/awesome-pic-dl](https://hub.docker.com/repository/docker/yindaheng98/awesome-pic-dl)
 
