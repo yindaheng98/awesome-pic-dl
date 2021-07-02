@@ -10,8 +10,12 @@ View on DockerHub: [yindaheng98/awesome-pic-dl](https://hub.docker.com/repositor
 
 ## [hardwarecode/onecomic](https://github.com/hardwarecode/onecomic)
 
-[Supported Sites](https://github.com/mikf/gallery-dl/blob/master/docs/supportedsites.md)
+[Supported Sites](https://onecomic-doc.readthedocs.io/en/latest/onecomic-project.html#id1)
+
+[Configuration](https://onecomic-doc.readthedocs.io/en/latest/onecomic-config.html)
 
 ## [mikf/gallery-dl](https://github.com/mikf/gallery-dl)
 
-[Supported Sites](https://onecomic-doc.readthedocs.io/en/latest/onecomic-project.html#id1)
+[Supported Sites](https://github.com/mikf/gallery-dl/blob/master/docs/supportedsites.md)
+
+[Configuration](https://github.com/mikf/gallery-dl#configuration)
