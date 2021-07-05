@@ -1,0 +1,53 @@
+name: Docker
+
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+on:
+  schedule:
+    - cron: '00 20 * * *'
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+env:
+  # github.repository as <account>/<repo>
+  IMAGE_NAME: ${{ github.repository }}
+
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Login against a Docker registry except on PR
+      # https://github.com/docker/login-action
+      - name: Log into docker
+        env:
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        run: |
+          echo "${DOCKER_PASSWORD}" | docker login --username ${DOCKER_USERNAME} --password-stdin
+
+      - name: Set up Docker Buildx
+        id: buildx
+        uses: crazy-max/ghaction-docker-buildx@v1
+        with:
+          buildx-version: latest
+
+      - name: Build dockerfile (with push)
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        run: |
+          docker buildx build \
+          --platform=linux/amd64,linux/arm/v7,linux/arm64 \
+          --output "type=image,push=true" \
+          --file ./Dockerfile . \
+          --tag $(echo "${DOCKER_USERNAME}" | tr '[:upper:]' '[:lower:]')/${IMAGE_NAME}:latest
