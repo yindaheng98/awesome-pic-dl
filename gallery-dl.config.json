@@ -3,7 +3,6 @@
     {
         "base-directory": "/data",
         "archive": "/data/gallery-dl/archive.sqlite3",
-        "cookies": "/data/gallery-dl/cookies.txt",
         "pixiv": {
             "filename": "{id}_p{num}.{extension}",
             "directory": [
@@ -28,9 +27,9 @@
             ]
         },
         "exhentai": {
-            "filename": "{num:>04}_{name}.{extension}",
+            "filename": "{gid}_{num:>04}_{filename}.{extension}",
             "directory": [
-                "{category!c}",
+                "exhentai",
                 "{title}"
             ],
             "wait-min": 1.0,
@@ -49,7 +48,9 @@
             ">" : "﹥"
         }
     },
-
+    "metadata":{
+        "extension":"json"
+    },
     "downloader":
     {
         "part-directory": "/tmp/.download/",
