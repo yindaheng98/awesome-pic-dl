@@ -29,3 +29,8 @@ RUN pip install --prefix /install --no-cache-dir \
 FROM base
 COPY --from=builder /install /usr/local
 RUN apk add --no-cache openjpeg jpeg tiff libxcb
+COPY onecomic.config.ini /etc/onecomic.config.ini
+ENV ONECOMIC_CONFIG_FILE="/etc/onecomic.config.ini"
+COPY gallery-dl.config.json /etc/gallery-dl.conf
+COPY entrypoint.sh /entrypoint.sh
+ENTRYPOINT [ "/entrypoint.sh" ]

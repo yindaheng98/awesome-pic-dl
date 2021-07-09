@@ -1,0 +1,89 @@
+{
+    "extractor":
+    {
+        "base-directory": "/data",
+        "archive": "/data/gallery-dl/archive.sqlite3",
+        "cookies": "/data/gallery-dl/cookies.txt",
+        "pixiv": {
+            "filename": "{id}_p{num}.{extension}",
+            "directory": [
+                "pixiv",
+                "{user[name]}"
+            ]
+        },
+        "twitter": {
+            "quoted": false,
+            "replies": true,
+            "retweets": false,
+            "directory": [
+                "twitter",
+                "{user[name]}"
+            ]
+        },
+        "fanbox": {
+            "filename": "{id}_p{num}.{extension}",
+            "directory": [
+                "fanbox",
+                "{user[name]}"
+            ]
+        },
+        "exhentai": {
+            "filename": "{num:>04}_{name}.{extension}",
+            "directory": [
+                "{category!c}",
+                "{title}"
+            ],
+            "wait-min": 1.0,
+            "wait-max": 5.0
+        },
+        "replace invalid path characters with unicode alternatives": null,
+        "path-restrict": {
+            "\\": "⧹",
+            "/" : "⧸",
+            "|" : "￨",
+            ":" : "꞉",
+            "*" : "∗",
+            "?" : "？",
+            "\"": "″",
+            "<" : "﹤",
+            ">" : "﹥"
+        }
+    },
+
+    "downloader":
+    {
+        "part-directory": "/tmp/.download/",
+        "rate": "1M",
+        "retries": 3,
+        "timeout": 8.5
+    },
+
+    "output":
+    {
+        "mode": "terminal",
+        "log": {
+            "level": "info",
+            "format": {
+                "debug"  : "\u001b[0;37m{name}: {message}\u001b[0m",
+                "info"   : "\u001b[1;37m{name}: {message}\u001b[0m",
+                "warning": "\u001b[1;33m{name}: {message}\u001b[0m",
+                "error"  : "\u001b[1;31m{name}: {message}\u001b[0m"
+            }
+        },
+        "logfile": {
+            "path": "/data/gallery-dl/log.txt",
+            "mode": "w",
+            "level": "debug"
+        },
+        "unsupportedfile": {
+            "path": "/data/gallery-dl/unsupported.txt",
+            "mode": "a",
+            "format": "{asctime} {message}",
+            "format-date": "%Y-%m-%d-%H-%M-%S"
+        }
+    },
+
+    "cache": {
+        "file": "/data/gallery-dl/cache.sqlite3"
+    }
+}
