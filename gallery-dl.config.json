@@ -3,6 +3,12 @@
     {
         "base-directory": "/data",
         "archive": "/data/gallery-dl/archive.sqlite3",
+        "postprocessors": [
+            {
+                "name": "metadata",
+                "directory": "metadata"
+            }
+        ],
         "pixiv": {
             "filename": "{id}_p{num}.{extension}",
             "directory": [
@@ -51,9 +57,6 @@
             "jpeg": "jpg",
             "": "jpg"
         }
-    },
-    "metadata":{
-        "extension":"json"
     },
     "downloader":
     {
