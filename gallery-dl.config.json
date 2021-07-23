@@ -1,7 +1,7 @@
 {
     "extractor":
     {
-        "base-directory": "/data",
+        "base-directory": "/data/gallery",
         "archive": "/data/gallery-dl/archive.sqlite3",
         "postprocessors": [
             {
