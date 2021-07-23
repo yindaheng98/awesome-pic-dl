@@ -20,6 +20,10 @@ View on DockerHub: [yindaheng98/awesome-pic-dl](https://hub.docker.com/repositor
 
 [Configuration](https://github.com/mikf/gallery-dl#configuration)
 
+## [yindaheng98/picacomic](https://github.com/yindaheng98/picacomic)
+
+随手写的，还不很完善
+
 ### Tips
 
 >*gallery-dl* searches for configuration files in the following places:
