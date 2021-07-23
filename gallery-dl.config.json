@@ -1,8 +1,8 @@
 {
     "extractor":
     {
-        "base-directory": "/data/gallery",
-        "archive": "/data/gallery-dl/archive.sqlite3",
+        "base-directory": "/gallery",
+        "archive": "/gallery-dl/archive.sqlite3",
         "postprocessors": [
             {
                 "name": "metadata",
@@ -79,12 +79,12 @@
             }
         },
         "logfile": {
-            "path": "/data/gallery-dl/log.txt",
+            "path": "/gallery-dl/log.txt",
             "mode": "w",
             "level": "debug"
         },
         "unsupportedfile": {
-            "path": "/data/gallery-dl/unsupported.txt",
+            "path": "/gallery-dl/unsupported.txt",
             "mode": "a",
             "format": "{asctime} {message}",
             "format-date": "%Y-%m-%d-%H-%M-%S"
@@ -92,6 +92,6 @@
     },
 
     "cache": {
-        "file": "/data/gallery-dl/cache.sqlite3"
+        "file": "/gallery-dl/cache.sqlite3"
     }
 }
