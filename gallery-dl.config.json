@@ -29,7 +29,7 @@
             "filename": "{id}_p{num}.{extension}",
             "directory": [
                 "fanbox",
-                "{user[name]}"
+                "{user[userId]}"
             ]
         },
         "exhentai": {
