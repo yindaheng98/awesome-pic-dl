@@ -13,7 +13,7 @@
             "filename": "{id}_p{num}.{extension}",
             "directory": [
                 "pixiv",
-                "{user[name]}"
+                "{user[account]}"
             ]
         },
         "twitter": {
