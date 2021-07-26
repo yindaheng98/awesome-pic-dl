@@ -13,7 +13,7 @@
             "filename": "{id}_p{num}.{extension}",
             "directory": [
                 "pixiv",
-                "{user[account]}"
+                "{user[id]}"
             ]
         },
         "twitter": {
@@ -29,7 +29,7 @@
             "filename": "{id}_p{num}.{extension}",
             "directory": [
                 "fanbox",
-                "{user[userId]}"
+                "{creatorId}"
             ]
         },
         "exhentai": {
