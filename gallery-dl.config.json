@@ -7,6 +7,12 @@
             {
                 "name": "metadata",
                 "directory": "metadata"
+            },
+            {
+                "name": "ugoira",
+                "ffmpeg-twopass": true,
+                "ffmpeg-args": ["-c:v", "libvpx-vp9", "-lossless", "1", "-an"],
+                "keep-files": true
             }
         ],
         "pixiv": {

@@ -31,6 +31,6 @@ COPY --from=builder /install /usr/local
 COPY onecomic.config.ini /etc/onecomic.config.ini
 COPY gallery-dl.config.json /etc/gallery-dl.conf
 COPY entrypoint.sh /entrypoint.sh
-RUN apk add --no-cache openjpeg jpeg tiff libxcb && chmod +x /entrypoint.sh
+RUN apk add --no-cache openjpeg jpeg tiff libxcb ffmpeg && chmod +x /entrypoint.sh
 ENV ONECOMIC_CONFIG_FILE="/etc/onecomic.config.ini"
 ENTRYPOINT [ "/entrypoint.sh" ]
