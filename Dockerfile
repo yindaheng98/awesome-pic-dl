@@ -1,4 +1,4 @@
-FROM python:3-alpine AS base
+FROM python:3.9-alpine AS base
 FROM base AS builder
 WORKDIR /install
 RUN apk add \
