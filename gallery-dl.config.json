@@ -42,7 +42,7 @@
             "filename": "{gid}_{num:>04}_{filename}.{extension}",
             "directory": [
                 "exhentai",
-                "{title}"
+                "{gid}"
             ],
             "wait-min": 1.0,
             "wait-max": 5.0
