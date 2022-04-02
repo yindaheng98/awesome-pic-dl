@@ -39,7 +39,7 @@
             ]
         },
         "exhentai": {
-            "filename": "{gid}_{num:>04}_{filename}.{extension}",
+            "filename": "{gid}_{token}_{num:>04}_{filename}.{extension}",
             "directory": [
                 "exhentai",
                 "{gid}"
