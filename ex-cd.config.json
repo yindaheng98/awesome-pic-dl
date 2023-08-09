@@ -1,7 +1,4 @@
 {
-    "gallery-dl-meta-args": [
-        "-c",
-        "/etc/gallery-dl.conf"
-    ],
+    "gallery-dl-meta-args": [],
     "gallery-root": "/gallery/exhentai"
 }
