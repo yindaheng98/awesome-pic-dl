@@ -28,7 +28,7 @@
             "retweets": false,
             "directory": [
                 "twitter",
-                "{user[name]}"
+                "{author[name]}"
             ]
         },
         "fanbox": {
