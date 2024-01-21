@@ -6,7 +6,7 @@
         "postprocessors": [
             {
                 "name": "metadata",
-                "directory": "metadata"
+                "directory": ".metadata"
             },
             {
                 "name": "ugoira",
